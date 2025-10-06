@@ -18,11 +18,11 @@ extern "C" {
 
 // Pin assignments
 #define PIN_ACT     PA2   // pin connected to fire button
-#define PIN_BEEP    PA1   // pin connected to buzzer
-#define PIN_UP      PC4
-#define PIN_DOWN    PC5
-#define PIN_LEFT    PC6
-#define PIN_RIGHT   PC7
+#define PIN_BEEP    PC0   // pin connected to buzzer
+#define PIN_UP      PC3
+#define PIN_DOWN    PC4
+#define PIN_LEFT    PD0
+#define PIN_RIGHT   PD2
 #define PIN_SCL     PC2   // pin connected to OLED (I2C SCL)
 #define PIN_SDA     PC1   // pin connected to OLED (I2C SDA)
 
