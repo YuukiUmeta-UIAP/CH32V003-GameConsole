@@ -70,6 +70,17 @@ uint8_t background(uint8_t x,uint8_t y);
 // Main Function
 // ===================================================================================
 int main(void) {
+
+  // Seamless Switch
+  if (FLASH->STATR & (1<<14)) NVIC_SystemReset();
+  FLASH->KEYR = 0x45670123;
+  FLASH->KEYR = 0xCDEF89AB;
+  FLASH->BOOT_MODEKEYR = 0x45670123;
+  FLASH->BOOT_MODEKEYR = 0xCDEF89AB;
+  FLASH->STATR |= (1<<14);
+  FLASH->CTLR = 0x00000080;
+  PIN_output( PD4 );
+
   // Setup
   JOY_init();
 
