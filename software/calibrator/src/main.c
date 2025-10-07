@@ -35,6 +35,9 @@ int main(void) {
   // Setup
   JOY_init();
 
+  OLED_println("Hello World!");
+  OLED_println("Tiny CH32 Pad Lite has NO ADC when default conf. You can re-Upload after push 'TrR' button in the upper right of this board.");
+
   // Loop
   while(1) {
     OLED_printD(ADC_read()); OLED_write('\n');
